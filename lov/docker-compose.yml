@@ -19,12 +19,3 @@ services:
       dockerfile: docker/php/Dockerfile
     volumes:
       - .:/app/
-  maildev:
-    build:
-      context: .
-      dockerfile: docker/maildev/Dockerfile
-    image: djfarrelly/maildev
-    ports:
-      - "8081:80"
-    volumes:
-      - .:/app/
